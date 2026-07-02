@@ -21,9 +21,60 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Pavle Josić | Backend Engineer",
+  metadataBase: new URL("https://tvoj-domen.com"),
+  title: {
+    default: "Pavle Josić | Full-Stack Developer",
+    template: "%s | Pavle Josić",
+  },
   description:
-    "Personal portfolio focusing on backend architecture, system design, and AppSec.",
+    "Software and Information Engineering student focused on backend systems, distributed architecture, and application security (AppSec). Stack-agnostic developer proficient in Go, Java, and Next.js.",
+  keywords: [
+    "Pavle Josic",
+    "Backend Engineer Serbia",
+    "Full-Stack Developer Belgrade",
+    "Software Engineer Pozarevac",
+    "Go backend developer",
+    "Spring Boot distributed systems",
+    "NestJS developer",
+    "Application Security AppSec",
+    "Next.js portfolio GSAP",
+  ],
+  authors: [{ name: "Pavle Josić", url: "https://github.com/jxpaa25" }],
+  creator: "Pavle Josić",
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://tvoj-domen.com",
+    title: "Pavle Josić | Full-Stack & Backend Engineer",
+    description:
+      "Software and Information Engineering student focused on backend systems, distributed architecture, and application security (AppSec).",
+    siteName: "Pavle Josić Portfolio",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Pavle Josić — Software Engineer Portfolio",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Pavle Josić | Full-Stack & Backend Engineer",
+    description: "Backend architecture, distributed systems, and AppSec.",
+    images: ["/og-image.jpg"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
 };
 
 export default function RootLayout({
