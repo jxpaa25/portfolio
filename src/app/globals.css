@@ -1,26 +1,136 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-surface: #080808;
+  --color-primary-fixed: #e2e2e2;
+  --color-on-primary-container: #636565;
+  --color-surface-variant: #353534;
+  --color-primary: #ffffff;
+  --color-primary-fixed-dim: #c6c6c7;
+  --color-on-secondary-fixed-variant: #45464e;
+  --color-surface-container-low: #1c1b1b;
+  --color-outline: #8e9192;
+  --color-on-tertiary-container: #656467;
+  --color-primary-container: #e2e2e2;
+  --color-on-error: #690005;
+  --color-surface-dim: #080808;
+  --color-on-primary: #2f3131;
+  --color-on-tertiary-fixed: #1b1b1e;
+  --color-inverse-surface: #e5e2e1;
+  --color-on-primary-fixed-variant: #454747;
+  --color-on-background: #e5e2e1;
+  --color-on-surface-variant: #c4c7c8;
+  --color-surface-container: #201f1f;
+  --color-tertiary-fixed: #e4e1e5;
+  --color-secondary-container: #45464e;
+  --color-secondary-fixed-dim: #c6c6cf;
+  --color-surface-container-highest: #353534;
+  --color-on-error-container: #ffdad6;
+  --color-on-surface: #e5e2e1;
+  --color-border-subtle: #27272a;
+  --color-background: #080808;
+  --color-surface-tint: #c6c6c7;
+  --color-secondary-fixed: #e2e1eb;
+  --color-surface-container-high: #2a2a2a;
+  --color-on-tertiary: #303033;
+  --color-on-secondary: #2f3037;
+  --color-surface-elevated: #18181b;
+  --color-text-muted: #71717a;
+  --color-on-secondary-container: #b4b4bd;
+  --color-on-tertiary-fixed-variant: #47464a;
+  --color-tertiary-container: #e4e1e5;
+  --color-error-container: #93000a;
+  --color-tertiary: #ffffff;
+  --color-error: #ffb4ab;
+  --color-inverse-primary: #5d5f5f;
+  --color-on-primary-fixed: #1a1c1c;
+  --color-on-secondary-fixed: #1a1b22;
+  --color-surface-bright: #3a3939;
+  --color-inverse-on-surface: #313030;
+  --color-tertiary-fixed-dim: #c8c6c9;
+  --color-secondary: #c6c6cf;
+  --color-surface-container-lowest: #0e0e0e;
+  --color-outline-variant: #444748;
+
+  --spacing-section-gap: 128px;
+  --spacing-container-max: 1100px;
+  --spacing-margin-mobile: 20px;
+  --spacing-gutter: 24px;
+  --spacing-unit: 8px;
+
+  /* Serif font za naslove i bitne istaknute elemente */
+  --font-display-lg: var(--font-lora);
+  --font-display-lg-mobile: var(--font-lora);
+  --font-headline-md: var(--font-lora);
+
+  /* Sans-serif font za paragrafe, opise i labele */
+  --font-body-lg: var(--font-inter);
+  --font-body-md: var(--font-inter);
+
+  /* Mono font za tagove, datume i tehničke detalje */
+  --font-code-sm: var(--font-geist-mono);
+  --font-label-caps: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@utility text-headline-md {
+  font-size: 24px;
+  line-height: 1.4;
+  letter-spacing: -0.02em;
+  font-weight: 500;
+}
+
+@utility text-body-lg {
+  font-size: 18px;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+@utility text-display-lg {
+  font-size: 48px;
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+  font-weight: 600;
+}
+
+@utility text-code-sm {
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+@utility text-display-lg-mobile {
+  font-size: 32px;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  font-weight: 600;
+}
+
+@utility text-body-md {
+  font-size: 16px;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+@utility text-label-caps {
+  font-size: 12px;
+  line-height: 1.2;
+  letter-spacing: 0.1em;
+  font-weight: 500;
+}
+
+@media (min-width: 768px) {
+  body {
+    cursor: none;
+  }
+  a,
+  button,
+  [role="button"] {
+    cursor: none; /* Da sakrije miš i na hoverima */
   }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-background);
+  color: var(--color-on-surface);
+  font-family: var(--font-geist-sans);
 }
