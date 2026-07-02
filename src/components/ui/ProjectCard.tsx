@@ -75,8 +75,9 @@ export function ProjectCard({
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="clickable group relative block py-6 border-b border-border-subtle/50 bg-transparent hover:bg-surface-elevated/10 transition-all duration-300 rounded-lg px-2 -mx-2 opacity-0
-                 before:absolute before:bottom-0 before:left-2 before:right-2 before:h-px before:bg-primary before:rounded-full before:scale-x-0 before:origin-left before:transition-transform before:duration-500 before:ease-out hover:before:scale-x-100"
+      className="clickable group relative block py-6 border-b border-border-subtle/50 bg-transparent transition-all duration-300 rounded-lg px-2 -mx-2 opacity-0
+           before:absolute before:bottom-0 before:left-2 before:right-2 before:h-px before:bg-primary before:rounded-full before:scale-x-0 before:origin-left before:transition-transform before:duration-500 before:ease-out hover:before:scale-x-100
+           after:absolute after:inset-0 after:rounded-lg after:bg-linear-to-t after:from-surface-elevated/15 after:to-transparent after:opacity-0 after:transition-opacity after:duration-500 after:pointer-events-none hover:after:opacity-100"
     >
       <div className="flex items-center gap-2 mb-3">
         <h3

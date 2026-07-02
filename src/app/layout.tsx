@@ -21,7 +21,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://tvoj-domen.com"),
+  metadataBase: new URL("https://portfolio-opal-iota-10.vercel.app/"),
   title: {
     default: "Pavle Josić | Full-Stack Developer",
     template: "%s | Pavle Josić",
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://tvoj-domen.com",
+    url: "https://portfolio-opal-iota-10.vercel.app/",
     title: "Pavle Josić | Full-Stack & Backend Engineer",
     description:
       "Software and Information Engineering student focused on backend systems, distributed architecture, and application security (AppSec).",

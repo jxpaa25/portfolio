@@ -1,7 +1,7 @@
 import { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://tvoj-domen.com"; // Zameni svojim domenom
+  const baseUrl = "https://portfolio-opal-iota-10.vercel.app/"; // Zameni svojim domenom
 
   return [
     {
