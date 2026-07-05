@@ -210,28 +210,32 @@ export default function Home() {
             className="text-md md:text-lg text-on-surface-variant/80 font-normal leading-relaxed max-w-240 mb-12 tracking-wide opacity-0"
             style={{ fontFamily: "var(--font-body-lg)" }}
           >
-            I am a Software and Information Engineering student at Singidunum
-            University in Belgrade, Serbia. My main focus is on{" "}
+            I'm a Software and Information Engineering student at Singidunum
+            University, with a deep focus on{" "}
             <strong className="text-primary font-semibold">
               backend engineering
             </strong>
             ,{" "}
             <strong className="text-primary font-semibold">
-              distributed system design
+              distributed systems
             </strong>
-            , and building secure software. While I spend most of my time
-            architecting robust server-side systems, I remain{" "}
-            <strong className="text-primary font-semibold">
-              stack-agnostic
-            </strong>{" "}
-            - often bridging the gap to the frontend with React and Next.js to
-            ensure seamless end-to-end performance. I enjoy working on scalable
-            platforms with a strong emphasis on{" "}
+            , and{" "}
             <strong className="text-primary font-semibold">
               application security (AppSec)
             </strong>
-            , aiming to write clean, resilient code through defensive design
-            patterns.
+            . While I spend most of my time architecting robust server-side
+            environments, I consider myself{" "}
+            <strong className="text-primary font-semibold">
+              stack-agnostic
+            </strong>
+            . I easily bridge the gap to the frontend using React and Next.js
+            whenever a project demands seamless end-to-end performance.
+            Ultimately, I enjoy building scalable platforms and writing clean,
+            resilient code rooted in{" "}
+            <strong className="text-primary font-semibold">
+              defensive design patterns
+            </strong>
+            .
           </p>
 
           <div

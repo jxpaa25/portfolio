@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 
-export default function CVPage() {
+export default function ResumePage() {
   return (
     <>
       <style jsx global>{`
@@ -45,8 +45,8 @@ export default function CVPage() {
 
         {/* Preuzimanje PDF-a */}
         <a
-          href="/Pavle Josic - CV.pdf"
-          download="Pavle_Josic_CV.pdf"
+          href="/Pavle Josic - Resume.pdf"
+          download="Pavle_Josic_Resume.pdf"
           className="clickable inline-flex items-center gap-1.5 text-xs font-mono text-white hover:text-slate-500 transition-colors border-b border-dashed border-white hover:border-slate-500 pb-0.5"
         >
           <span>Download PDF</span>
@@ -77,7 +77,17 @@ export default function CVPage() {
               </div>
             </div>
 
+            {/* Kontakt linkovi sa dodatim portfoliom na prvom mestu */}
             <div className="flex flex-wrap items-center gap-x-3 text-[11px] font-mono text-slate-400">
+              <a
+                href="https://portfolio-opal-iota-10.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="clickable hover:text-slate-900 hover:underline text-slate-700 font-medium"
+              >
+                portfolio-opal-iota-10.vercel.app
+              </a>
+              <span>•</span>
               <a
                 href="mailto:pavlejosic2004@gmail.com"
                 className="clickable hover:text-slate-900 hover:underline"
