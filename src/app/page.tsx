@@ -20,7 +20,6 @@ export default function Home() {
   const { hasVisited, setHasVisited } = useAnimation();
 
   useEffect(() => {
-    // --- AKO KORISNIK PONOVO POSREĆUJE STRANICU ---
     if (hasVisited) {
       if (containerRef.current) containerRef.current.style.filter = "blur(0px)";
       const heroElements = heroRef.current?.children;
@@ -45,7 +44,6 @@ export default function Home() {
         },
       );
 
-      // Izolovani i čisti ScrollTrigger za kontakt tekstove pri povratku
       const contactTexts =
         contactRef.current?.querySelectorAll(".contact-text");
       if (contactTexts && contactTexts.length > 0) {
@@ -67,7 +65,6 @@ export default function Home() {
         );
       }
 
-      // Elegantan fade-in bez pomeranja po y-osi za dugme pri povratku
       const contactBtn = contactRef.current?.querySelector(".contact-btn");
       if (contactBtn) {
         gsap.fromTo(
@@ -89,9 +86,7 @@ export default function Home() {
       return;
     }
 
-    // --- PRVA PRAVA POSIETA SAJTU ---
     const ctx = gsap.context(() => {
-      // 1. Unblur celog sajta
       gsap.fromTo(
         containerRef.current,
         { filter: "blur(20px)", opacity: 0.8 },
@@ -104,7 +99,6 @@ export default function Home() {
         },
       );
 
-      // 2. Hero Stagger Entrance
       const heroElements = heroRef.current?.children;
       if (heroElements) {
         gsap.fromTo(
@@ -121,7 +115,6 @@ export default function Home() {
         );
       }
 
-      // 3. Technical Arsenal
       gsap.fromTo(
         ".tech-column",
         { opacity: 0, y: 15 },
@@ -141,7 +134,6 @@ export default function Home() {
       );
     }, containerRef);
 
-    // 4. Contact Section Entrance (Prva poseta)
     const contactTexts = contactRef.current?.querySelectorAll(".contact-text");
     if (contactTexts && contactTexts.length > 0) {
       gsap.fromTo(
@@ -162,8 +154,6 @@ export default function Home() {
       );
     }
 
-    // Suptilan uvod za dugme: samo nežan fade-in (opacity), bez pomeranja (y),
-    // što eliminiše "skakanje" i čuva Tailwind transitions
     const contactBtn = contactRef.current?.querySelector(".contact-btn");
     if (contactBtn) {
       gsap.fromTo(
@@ -404,7 +394,6 @@ export default function Home() {
             Get In Touch
           </h2>
           <div className="max-w-3xl">
-            {/* Tekstovi sada imaju klasu 'contact-text' */}
             <h3
               className="contact-text text-3xl md:text-5xl text-primary font-normal tracking-tight mb-6 leading-[1.15] opacity-0"
               style={{ fontFamily: "var(--font-display-lg)" }}
@@ -421,7 +410,6 @@ export default function Home() {
               need help turning a business idea into a functional product -
               let's connect.
             </p>
-            {/* Dugme je potpuno izolovano kroz klasu 'contact-btn' */}
             <a
               className="contact-btn clickable inline-flex items-center gap-2 px-6 py-3 bg-primary text-[#0B0B0B] border border-primary rounded-full hover:bg-transparent hover:text-primary transition-all duration-300 font-semibold text-sm opacity-0"
               href="mailto:pavlejosic2004@gmail.com"

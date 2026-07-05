@@ -32,9 +32,9 @@ export default function ResumePage() {
         }
       `}</style>
 
-      {/* Navigacija koja se vidi samo na ekranu */}
+      {/* Naivgation (WebPage only) */}
       <div className="w-full mx-auto px-8 pt-6 flex justify-between items-center no-print">
-        {/* Nazad na Portfolio */}
+        {/* Back to Portfolio */}
         <Link
           href="/"
           className="clickable inline-flex items-center gap-1.5 text-xs font-mono text-white hover:text-slate-500 transition-colors border-b border-dashed border-white hover:border-slate-500 pb-0.5"
@@ -43,7 +43,7 @@ export default function ResumePage() {
           <span>Portfolio</span>
         </Link>
 
-        {/* Preuzimanje PDF-a */}
+        {/* Download PDF-a */}
         <a
           href="/Pavle Josic - Resume.pdf"
           download="Pavle_Josic_Resume.pdf"
@@ -77,7 +77,7 @@ export default function ResumePage() {
               </div>
             </div>
 
-            {/* Kontakt linkovi sa dodatim portfoliom na prvom mestu */}
+            {/* Contact links */}
             <div className="flex flex-wrap items-center gap-x-3 text-[11px] font-mono text-slate-400">
               <a
                 href="https://portfolio-opal-iota-10.vercel.app/"

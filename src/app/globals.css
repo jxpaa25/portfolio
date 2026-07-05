@@ -120,12 +120,12 @@
 
 @media (min-width: 768px) {
   body {
-    cursor: none;
+    cursor: none !important;
   }
   a,
   button,
   [role="button"] {
-    cursor: none; /* Da sakrije miš i na hoverima */
+    cursor: none !important;
   }
 }
 

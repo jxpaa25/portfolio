@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import { usePathname } from "next/navigation"; // <-- Dodato za detekciju promene rute
+import { usePathname } from "next/navigation";
 import gsap from "gsap";
 
 export function CustomCursor() {
@@ -28,7 +28,23 @@ export function CustomCursor() {
     let mouseY = 0;
     let currentX = 0;
     let currentY = 0;
+    let hasMovedYet = false;
 
+    const onFirstMove = (e: MouseEvent) => {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+      currentX = e.clientX;
+      currentY = e.clientY;
+
+      cursor.style.transform = `translate3d(${currentX}px, ${currentY}px, 0) translate(-50%, -50%)`;
+      cursor.style.opacity = "1";
+      hasMovedYet = true;
+
+      window.removeEventListener("mousemove", onFirstMove);
+    };
+    window.addEventListener("mousemove", onFirstMove);
+
+    // Standardno praćenje koordinata
     const onMouseMove = (e: MouseEvent) => {
       mouseX = e.clientX;
       mouseY = e.clientY;
@@ -70,10 +86,9 @@ export function CustomCursor() {
     window.addEventListener("mouseout", onMouseOut);
 
     const animateCursor = () => {
-      currentX += (mouseX - currentX) * 0.15;
-      currentY += (mouseY - currentY) * 0.15;
-
-      if (cursor) {
+      if (hasMovedYet) {
+        currentX += (mouseX - currentX) * 0.15;
+        currentY += (mouseY - currentY) * 0.15;
         cursor.style.transform = `translate3d(${currentX}px, ${currentY}px, 0) translate(-50%, -50%)`;
       }
 
@@ -83,6 +98,7 @@ export function CustomCursor() {
     const animationId = requestAnimationFrame(animateCursor);
 
     return () => {
+      window.removeEventListener("mousemove", onFirstMove);
       window.removeEventListener("mousemove", onMouseMove);
       window.removeEventListener("mouseover", onMouseOver);
       window.removeEventListener("mouseout", onMouseOut);
@@ -94,7 +110,7 @@ export function CustomCursor() {
     <div
       ref={cursorRef}
       className="pointer-events-none fixed top-0 left-0 z-9999 hidden md:block
-                 w-6 h-6 bg-white rounded-full mix-blend-difference will-change-transform"
+                 w-6 h-6 bg-white rounded-full mix-blend-difference will-change-transform opacity-0 transition-opacity duration-150"
     />
   );
 }
