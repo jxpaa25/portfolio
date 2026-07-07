@@ -32,7 +32,7 @@ export default function ResumePage() {
         }
       `}</style>
 
-      {/* Naivgation (WebPage only) */}
+      {/* Navigation (WebPage only) */}
       <div className="w-full mx-auto px-8 pt-6 flex justify-between items-center no-print">
         {/* Back to Portfolio */}
         <Link
@@ -43,7 +43,7 @@ export default function ResumePage() {
           <span>Portfolio</span>
         </Link>
 
-        {/* Download PDF-a */}
+        {/* Download PDF */}
         <a
           href="/Pavle Josic - Resume.pdf"
           download="Pavle_Josic_Resume.pdf"
@@ -119,13 +119,12 @@ export default function ResumePage() {
             Profile Summary
           </h2>
           <p className="text-xs text-slate-700 leading-relaxed text-justify max-w-3xl">
-            Software and Information Engineering student with a strong
-            specialization in backend engineering, distributed systems, and
-            application security (AppSec). Stack-agnostic developer experienced
-            in building scalable server-side architectures, implementing
-            defensive design patterns, and bridging the gap to frontend
-            operations using modern frameworks to ensure seamless end-to-end
-            performance.
+            Software and Information Engineering student focused on backend
+            engineering, distributed systems, and application security (AppSec).
+            Stack-agnostic developer experienced in building scalable
+            server-side architectures, implementing defensive design patterns,
+            and developing frontend interfaces with modern frameworks to deliver
+            full-stack applications.
           </p>
         </section>
 
@@ -149,7 +148,7 @@ export default function ResumePage() {
               </span>
               <span className="font-medium text-slate-800">
                 Next.js • React • Nest.js • Spring Boot • Express.js • Tailwind
-                CSS • GSAP • Claude AI • Postman
+                CSS • GSAP • Postman • Claude AI
               </span>
             </div>
 
@@ -169,6 +168,7 @@ export default function ResumePage() {
             Selected Works
           </h2>
           <div className="flex flex-col gap-3.5">
+            {/* PROJECT 1 */}
             <div className="flex flex-col gap-0.5">
               <div className="flex justify-between items-baseline">
                 <h3 className="font-bold text-sm text-slate-900">
@@ -188,16 +188,16 @@ export default function ResumePage() {
                 <span>Microservices</span> • <span>JWT</span>
               </div>
               <p className="text-xs text-slate-600 leading-relaxed text-justify mt-0.5">
-                Architected and deployed a distributed backend ecosystem split
-                into decentralized microservices for decoupled authentication
-                and core enterprise operations. Utilized containerized
-                PostgreSQL instances to enforce strict database-per-service
-                isolation, integrated a centralized JWT validation layer, and
-                established strict Role-Based Access Control (RBAC) to harden
-                inter-service communication mesh.
+                Built a distributed backend using microservices to decouple
+                authentication from core business operations. Containerized
+                PostgreSQL instances to enforce database-per-service isolation,
+                integrated a centralized JWT validation layer, and implemented
+                Role-Based Access Control (RBAC) for secure inter-service
+                communication.
               </p>
             </div>
 
+            {/* PROJECT 2 */}
             <div className="flex flex-col gap-0.5">
               <div className="flex justify-between items-baseline">
                 <h3 className="font-bold text-sm text-slate-900">
@@ -217,16 +217,16 @@ export default function ResumePage() {
                 <span>DeFi Architecture</span>
               </div>
               <p className="text-xs text-slate-600 leading-relaxed text-justify mt-0.5">
-                Engineered a Uniswap V2-style decentralized financial exchange
-                deployed on Ethereum testnets. Implemented the
-                Factory-Pair-Router structural pattern for deterministic and
-                dynamic liquidity pool deployments. Developed smart contracts
-                managing LP token minting through the Constant Product Formula
-                and governed reliable on-chain token swaps backed by automated
-                protocol fee generation layers.
+                Built a Uniswap V2-style decentralized exchange deployed on
+                Ethereum testnets. Implemented the Factory-Pair-Router pattern
+                for dynamic liquidity pool deployments. Developed smart
+                contracts to manage LP token minting via the Constant Product
+                Formula and handled on-chain token swaps with automated protocol
+                fees.
               </p>
             </div>
 
+            {/* PROJECT 3 */}
             <div className="flex flex-col gap-0.5">
               <div className="flex justify-between items-baseline">
                 <h3 className="font-bold text-sm text-slate-900">
@@ -245,15 +245,15 @@ export default function ResumePage() {
                 <span>Tailwind CSS</span> • <span>Vercel</span>
               </div>
               <p className="text-xs text-slate-600 leading-relaxed text-justify mt-0.5">
-                Developed and shipped a live web platform for a technical
-                inspection business with a strict focus on high-performance UX.
-                Engineered responsive, fluid layout sequences using GSAP and
-                Tailwind CSS. Implemented advanced Search Engine Optimization
-                (SEO) strategies to maximize local discovery, search crawl
-                indexing performance, and keyword ranking metrics.
+                Developed a web platform for a technical inspection business
+                with a focus on fast performance and clean UI. Implemented
+                responsive animations using GSAP and Tailwind CSS, and optimized
+                SEO performance to improve local search visibility and keyword
+                rankings.
               </p>
             </div>
 
+            {/* PROJECT 4 */}
             <div className="flex flex-col gap-0.5">
               <div className="flex justify-between items-baseline">
                 <h3 className="font-bold text-sm text-slate-900">
@@ -269,15 +269,14 @@ export default function ResumePage() {
               </div>
               <div className="flex flex-wrap gap-2 text-[10px] text-slate-500 font-mono">
                 <span>Python</span> • <span>NumPy</span> •
-                <span>Linear Algebra</span> •<span>Machine Learning</span>
+                <span>Linear Algebra</span> • <span>Machine Learning</span>
               </div>
               <p className="text-xs text-slate-600 leading-relaxed text-justify mt-0.5">
-                Built a dense neural network framework from scratch using pure
-                NumPy to isolate and analyze foundational mathematical mechanics
-                of machine learning. Authored abstractions for custom network
-                layers, designed manual matrix-based backpropagation pipelines,
-                and natively implemented optimized training constraints
-                including Adam, RMSprop, and regularizers.
+                Built a dense neural network framework from scratch using NumPy
+                to understand the underlying mathematics of machine learning.
+                Implemented abstractions for custom network layers, designed
+                matrix-based backpropagation pipelines, and added optimization
+                algorithms including Adam, RMSprop, and regularizers.
               </p>
             </div>
           </div>

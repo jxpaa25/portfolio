@@ -201,7 +201,7 @@ export default function Home() {
             style={{ fontFamily: "var(--font-body-lg)" }}
           >
             I'm a Software and Information Engineering student at Singidunum
-            University, with a deep focus on{" "}
+            University, focused on{" "}
             <strong className="text-primary font-semibold">
               backend engineering
             </strong>
@@ -213,19 +213,10 @@ export default function Home() {
             <strong className="text-primary font-semibold">
               application security (AppSec)
             </strong>
-            . While I spend most of my time architecting robust server-side
-            environments, I consider myself{" "}
-            <strong className="text-primary font-semibold">
-              stack-agnostic
-            </strong>
-            . I easily bridge the gap to the frontend using React and Next.js
-            whenever a project demands seamless end-to-end performance.
-            Ultimately, I enjoy building scalable platforms and writing clean,
-            resilient code rooted in{" "}
-            <strong className="text-primary font-semibold">
-              defensive design patterns
-            </strong>
-            .
+            . Stack-agnostic developer experienced in building scalable
+            server-side architectures, implementing defensive design patterns,
+            and developing frontend interfaces with modern frameworks to deliver
+            full-stack applications.
           </p>
 
           <div
@@ -314,8 +305,8 @@ export default function Home() {
                 <Badge>Express.js</Badge>
                 <Badge>Tailwind CSS</Badge>
                 <Badge>GSAP</Badge>
-                <Badge>Claude AI</Badge>
                 <Badge>Postman</Badge>
+                <Badge>Claude AI</Badge>
               </div>
             </div>
             <div className="tech-column opacity-0">
@@ -330,7 +321,6 @@ export default function Home() {
                 <Badge>PostgreSQL</Badge>
                 <Badge>Prisma ORM</Badge>
                 <Badge>Docker</Badge>
-                <Badge>Postgres</Badge>
                 <Badge>Redis</Badge>
               </div>
             </div>
@@ -348,7 +338,7 @@ export default function Home() {
           <div className="flex flex-col gap-10">
             <ProjectCard
               title="Microservices Restaurant Management System"
-              description="A distributed backend system split into independent services for authentication and core restaurant operations. Built with containerized PostgreSQL databases for service isolation, using centralized JWT verification and strict role-based access control (RBAC) to secure system communication."
+              description="Built a distributed backend using microservices to decouple authentication from core business operations. Containerized PostgreSQL instances to enforce database-per-service isolation, integrated a centralized JWT validation layer, and implemented Role-Based Access Control (RBAC) for secure inter-service communication."
               tags={[
                 "Spring Boot",
                 "Java",
@@ -360,7 +350,7 @@ export default function Home() {
             />
             <ProjectCard
               title="Decentralized Automated Market Maker (AMM)"
-              description="A Uniswap V2-style decentralized exchange implemented on Ethereum. It utilizes the Factory-Pair-Router pattern for dynamic liquidity pool deployment, manages LP token minting using the Constant Product Formula, and handles automated swaps with an integrated 0.3% protocol fee."
+              description="Built a Uniswap V2-style decentralized exchange deployed on Ethereum testnets. Implemented the Factory-Pair-Router pattern for dynamic liquidity pool deployments. Developed smart contracts to manage LP token minting via the Constant Product Formula and handled on-chain token swaps with automated protocol fees."
               tags={[
                 "Solidity",
                 "Smart Contracts",
@@ -372,13 +362,13 @@ export default function Home() {
             />
             <ProjectCard
               title="Tehnički Pregled Lazarević 1968"
-              description="A deployed, live production website built with a focus on clean UI animations and strict SEO optimization to maximize search engine visibility and discoverability."
+              description="Developed a web platform for a technical inspection business with a focus on fast performance and clean UI. Implemented responsive animations using GSAP and Tailwind CSS, and optimized SEO performance to improve local search visibility and keyword rankings."
               tags={["Next.js", "GSAP", "Tailwind CSS", "Vercel"]}
               href="https://www.tehnickipregledlazarevic-pozarevac.rs/"
             />
             <ProjectCard
               title="NNCraft: Deep Learning Framework from Scratch"
-              description="A neural network library built from the ground up using NumPy to understand underlying deep learning mechanics. Implements custom layer abstractions, manual backpropagation, advanced optimizers like Adam and RMSprop, and standard regularization techniques."
+              description="Built a dense neural network framework from scratch using NumPy to understand the underlying mathematics of machine learning. Implemented abstractions for custom network layers, designed matrix-based backpropagation pipelines, and added optimization algorithms including Adam, RMSprop, and regularizers."
               tags={["Python", "NumPy", "Neural Networks", "Machine Learning"]}
               href="https://github.com/jxpaa25/NNCraft"
             />
