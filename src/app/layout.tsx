@@ -27,16 +27,14 @@ export const metadata: Metadata = {
     template: "%s | Pavle Josić",
   },
   description:
-    "Software and Information Engineering student focused on backend systems, distributed architecture, and application security (AppSec). Stack-agnostic developer proficient in Go, Java, and Next.js.",
+    "Final-year Software and Information Engineering student and full-stack developer with a backend focus on TypeScript (Node.js, NestJS) and Java (Spring Boot).",
   keywords: [
     "Pavle Josic",
     "Backend Engineer Serbia",
     "Full-Stack Developer Belgrade",
     "Software Engineer Pozarevac",
-    "Go backend developer",
     "Spring Boot distributed systems",
     "NestJS developer",
-    "Application Security AppSec",
     "Next.js portfolio GSAP",
   ],
   authors: [{ name: "Pavle Josić", url: "https://github.com/jxpaa25" }],
@@ -47,7 +45,7 @@ export const metadata: Metadata = {
     url: "https://portfolio-opal-iota-10.vercel.app/",
     title: "Pavle Josić | Full-Stack & Backend Engineer",
     description:
-      "Software and Information Engineering student focused on backend systems, distributed architecture, and application security (AppSec).",
+      "Final-year Software and Information Engineering student and full-stack developer with a backend focus on TypeScript (Node.js, NestJS) and Java (Spring Boot).",
     siteName: "Pavle Josić Portfolio",
     images: [
       {
@@ -61,7 +59,8 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Pavle Josić | Full-Stack & Backend Engineer",
-    description: "Backend architecture, distributed systems, and AppSec.",
+    description:
+      "Full-stack developer focused on backend work with NestJS and Spring Boot.",
     images: ["/og-image.jpg"],
   },
   robots: {

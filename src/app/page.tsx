@@ -12,6 +12,44 @@ import { useAnimation } from "@/components/context/AnimationProvider";
 
 gsap.registerPlugin(ScrollTrigger);
 
+const skillGroups = [
+  {
+    title: "Languages",
+    skills: ["TypeScript", "JavaScript", "Java", "Python", "Solidity"],
+  },
+  {
+    title: "Backend",
+    skills: [
+      "Node.js",
+      "NestJS",
+      "Express",
+      "Spring Boot",
+      "REST APIs",
+      "JWT",
+      "RBAC",
+    ],
+  },
+  {
+    title: "Frontend",
+    skills: ["React", "Next.js", "Tailwind CSS", "GSAP"],
+  },
+  {
+    title: "Data & DevOps",
+    skills: [
+      "PostgreSQL",
+      "Prisma",
+      "Docker",
+      "Git",
+      "CI/CD (GitHub Actions)",
+      "Vercel",
+    ],
+  },
+  {
+    title: "Testing",
+    skills: ["JUnit", "Vitest"],
+  },
+];
+
 export default function Home() {
   const containerRef = useRef<HTMLDivElement>(null);
   const heroRef = useRef<HTMLDivElement>(null);
@@ -188,7 +226,7 @@ export default function Home() {
             className="text-display-lg-mobile md:text-[5.5rem] font-normal leading-[1.05] tracking-tight text-primary mb-20 opacity-0"
             style={{ fontFamily: "var(--font-display-lg)" }}
           >
-            Hi, I'm{" "}
+            Hi, I&apos;m{" "}
             <span className="text-on-surface-variant font-light">
               Pavle Josić
             </span>
@@ -200,23 +238,19 @@ export default function Home() {
             className="text-md md:text-lg text-on-surface-variant/80 font-normal leading-relaxed max-w-240 mb-12 tracking-wide opacity-0"
             style={{ fontFamily: "var(--font-body-lg)" }}
           >
-            I'm a Software and Information Engineering student at Singidunum
-            University, focused on{" "}
+            I&apos;m a final-year Software and Information Engineering student at
+            Singidunum University, looking for a junior full-stack role with a
+            backend focus on{" "}
             <strong className="text-primary font-semibold">
-              backend engineering
-            </strong>
-            ,{" "}
+              TypeScript (Node.js, NestJS)
+            </strong>{" "}
+            and{" "}
             <strong className="text-primary font-semibold">
-              distributed systems
+              Java (Spring Boot)
             </strong>
-            , and{" "}
-            <strong className="text-primary font-semibold">
-              application security (AppSec)
-            </strong>
-            . Stack-agnostic developer experienced in building scalable
-            server-side architectures, implementing defensive design patterns,
-            and developing frontend interfaces with modern frameworks to deliver
-            full-stack applications.
+            . Experienced in building secure REST APIs with Spring Boot and
+            NestJS, containerizing services with Docker, and deploying
+            production web applications on Vercel.
           </p>
 
           <div
@@ -272,58 +306,24 @@ export default function Home() {
             className="text-[10px] text-text-muted uppercase tracking-[0.25em] mb-12 border-b border-border-subtle/40 pb-4"
             style={{ fontFamily: "var(--font-label-caps)" }}
           >
-            Technical Arsenal
+            Skills
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-            <div className="tech-column opacity-0">
-              <h3
-                className="text-[11px] uppercase tracking-[0.15em] text-primary/70 mb-6"
-                style={{ fontFamily: "var(--font-label-caps)" }}
-              >
-                Languages
-              </h3>
-              <div className="flex flex-wrap gap-2">
-                <Badge>JavaScript</Badge>
-                <Badge>TypeScript</Badge>
-                <Badge>Python</Badge>
-                <Badge>Solidity</Badge>
-                <Badge>Java</Badge>
+            {skillGroups.map((group) => (
+              <div key={group.title} className="tech-column opacity-0">
+                <h3
+                  className="text-[11px] uppercase tracking-[0.15em] text-primary/70 mb-6"
+                  style={{ fontFamily: "var(--font-label-caps)" }}
+                >
+                  {group.title}
+                </h3>
+                <div className="flex flex-wrap gap-2">
+                  {group.skills.map((skill) => (
+                    <Badge key={skill}>{skill}</Badge>
+                  ))}
+                </div>
               </div>
-            </div>
-            <div className="tech-column opacity-0">
-              <h3
-                className="text-[11px] uppercase tracking-[0.15em] text-primary/70 mb-6"
-                style={{ fontFamily: "var(--font-label-caps)" }}
-              >
-                Frameworks, Libs & Tools
-              </h3>
-              <div className="flex flex-wrap gap-2">
-                <Badge>Next.js</Badge>
-                <Badge>React</Badge>
-                <Badge>Nest.js</Badge>
-                <Badge>Spring Boot</Badge>
-                <Badge>Express.js</Badge>
-                <Badge>Tailwind CSS</Badge>
-                <Badge>GSAP</Badge>
-                <Badge>Postman</Badge>
-                <Badge>Claude AI</Badge>
-              </div>
-            </div>
-            <div className="tech-column opacity-0">
-              <h3
-                className="text-[11px] uppercase tracking-[0.15em] text-primary/70 mb-6"
-                style={{ fontFamily: "var(--font-label-caps)" }}
-              >
-                Backend, Ops & DBs
-              </h3>
-              <div className="flex flex-wrap gap-2">
-                <Badge>Node.js</Badge>
-                <Badge>PostgreSQL</Badge>
-                <Badge>Prisma ORM</Badge>
-                <Badge>Docker</Badge>
-                <Badge>Redis</Badge>
-              </div>
-            </div>
+            ))}
           </div>
         </section>
 
@@ -338,38 +338,33 @@ export default function Home() {
           <div className="flex flex-col gap-10">
             <ProjectCard
               title="Microservices Restaurant Management System"
-              description="Built a distributed backend using microservices to decouple authentication from core business operations. Containerized PostgreSQL instances to enforce database-per-service isolation, integrated a centralized JWT validation layer, and implemented Role-Based Access Control (RBAC) for secure inter-service communication."
+              description="Spring Boot backend split into an Identity service and a Restaurant service, each with its own PostgreSQL database. A shared library handles JWT validation for both services, endpoints are restricted by role with @PreAuthorize, and the whole system runs in Docker Compose."
               tags={[
-                "Spring Boot",
                 "Java",
+                "Spring Boot",
+                "Spring Security",
                 "PostgreSQL",
                 "Docker",
-                "Microservices",
+                "JWT",
               ]}
               href="https://github.com/jxpaa25/restaurant-management-backend"
             />
             <ProjectCard
-              title="Decentralized Automated Market Maker (AMM)"
-              description="Built a Uniswap V2-style decentralized exchange deployed on Ethereum testnets. Implemented the Factory-Pair-Router pattern for dynamic liquidity pool deployments. Developed smart contracts to manage LP token minting via the Constant Product Formula and handled on-chain token swaps with automated protocol fees."
-              tags={[
-                "Solidity",
-                "Smart Contracts",
-                "ERC20",
-                "OpenZeppelin",
-                "DeFi Architecture",
-              ]}
-              href="https://github.com/jxpaa25/Web3AcademyTasks/tree/main"
-            />
-            <ProjectCard
               title="Tehnički Pregled Lazarević 1968"
-              description="Developed a web platform for a technical inspection business with a focus on fast performance and clean UI. Implemented responsive animations using GSAP and Tailwind CSS, and optimized SEO performance to improve local search visibility and keyword rankings."
-              tags={["Next.js", "GSAP", "Tailwind CSS", "Vercel"]}
+              description="Production website for a vehicle inspection business in Požarevac. I worked out the requirements with the owner, deployed the site on Vercel with the business's own .rs domain, and set up technical SEO for local search: structured data, a sitemap, and a page with its own metadata for each service."
+              tags={["Next.js", "TypeScript", "Tailwind CSS", "GSAP", "Vercel"]}
               href="https://www.tehnickipregledlazarevic-pozarevac.rs/"
             />
             <ProjectCard
+              title="Decentralized Automated Market Maker (AMM)"
+              description="Uniswap V2-style decentralized exchange deployed to the Ethereum Sepolia testnet. It uses the Factory-Pair-Router architecture: the factory deploys a liquidity pool for each token pair, and the pair contract mints LP tokens with the constant product formula and charges a protocol fee on swaps."
+              tags={["Solidity", "ERC20", "OpenZeppelin"]}
+              href="https://github.com/jxpaa25/Web3AcademyTasks/tree/main/amm"
+            />
+            <ProjectCard
               title="NNCraft: Deep Learning Framework from Scratch"
-              description="Built a dense neural network framework from scratch using NumPy to understand the underlying mathematics of machine learning. Implemented abstractions for custom network layers, designed matrix-based backpropagation pipelines, and added optimization algorithms including Adam, RMSprop, and regularizers."
-              tags={["Python", "NumPy", "Neural Networks", "Machine Learning"]}
+              description="Dense neural network library written with only NumPy, built to learn how frameworks such as PyTorch work internally. It implements matrix-based backpropagation, five loss functions, the SGD, AdaGrad, AdaDelta, RMSprop and Adam optimizers, and dropout and L1/L2 regularization."
+              tags={["Python", "NumPy"]}
               href="https://github.com/jxpaa25/NNCraft"
             />
           </div>
@@ -394,11 +389,8 @@ export default function Home() {
               className="contact-text text-md md:text-lg text-on-surface-variant/85 font-normal leading-relaxed mb-8 opacity-0"
               style={{ fontFamily: "var(--font-body-lg)" }}
             >
-              I'm always open to discussing new career opportunities, full-time
-              engineering roles, or freelance full-stack projects. If you think
-              my technical background aligns with your team's goals, or if you
-              need help turning a business idea into a functional product -
-              let's connect.
+              I&apos;m looking for a junior full-stack or backend developer role. If
+              my background fits what your team needs, send me an email.
             </p>
             <a
               className="contact-btn clickable inline-flex items-center gap-2 px-6 py-3 bg-primary text-[#0B0B0B] border border-primary rounded-full hover:bg-transparent hover:text-primary transition-all duration-300 font-semibold text-sm opacity-0"
@@ -429,7 +421,7 @@ export default function Home() {
               <TimelineItem
                 title="Software and Information Engineering"
                 date="2023 — Now"
-                institution="Singidunum University (3rd year)"
+                institution="Singidunum University (final year)"
                 isFirst={true}
               />
               <TimelineItem

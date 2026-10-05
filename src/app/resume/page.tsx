@@ -7,6 +7,10 @@ export default function ResumePage() {
   return (
     <>
       <style jsx global>{`
+        @page {
+          size: A4;
+          margin: 0;
+        }
         @media print {
           body {
             background-color: #ffffff !important;
@@ -25,6 +29,10 @@ export default function ResumePage() {
           }
           h3 {
             font-size: 13px !important;
+          }
+          .contact-links a,
+          .contact-links span {
+            font-size: 10.5px !important;
           }
           .no-print {
             display: none !important;
@@ -68,7 +76,7 @@ export default function ResumePage() {
               </h1>
               <div className="flex items-center gap-2 mt-0.5">
                 <p className="text-sm text-slate-500 font-light">
-                  Full-Stack Developer
+                  Junior Full-Stack Developer
                 </p>
                 <span className="text-slate-300 text-xs">&bull;</span>
                 <span className="text-xs text-slate-500 font-medium tracking-wide">
@@ -78,213 +86,260 @@ export default function ResumePage() {
             </div>
 
             {/* Contact links */}
-            <div className="flex flex-wrap items-center gap-x-3 text-[11px] font-mono text-slate-400">
-              <a
-                href="https://portfolio-opal-iota-10.vercel.app/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="clickable hover:text-slate-900 hover:underline text-slate-700 font-medium"
-              >
-                portfolio-opal-iota-10.vercel.app
-              </a>
-              <span>•</span>
+            <div className="contact-links flex flex-wrap items-center gap-x-2 text-[10.5px] font-mono text-slate-400">
               <a
                 href="mailto:pavlejosic2004@gmail.com"
-                className="clickable hover:text-slate-900 hover:underline"
+                className="clickable hover:text-slate-900 hover:underline text-slate-700 font-medium"
               >
                 pavlejosic2004@gmail.com
               </a>
               <span>•</span>
               <a
-                href="https://linkedin.com/in/pavlejosic/"
+                href="https://github.com/jxpaa25"
                 target="_blank"
+                rel="noopener noreferrer"
+                className="clickable hover:text-slate-900 hover:underline"
+              >
+                github.com/jxpaa25
+              </a>
+              <span>•</span>
+              <a
+                href="https://www.linkedin.com/in/pavlejosic/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="clickable hover:text-slate-900 hover:underline"
               >
                 linkedin.com/in/pavlejosic
               </a>
               <span>•</span>
               <a
-                href="https://github.com/jxpaa25"
+                href="https://portfolio-opal-iota-10.vercel.app/"
                 target="_blank"
+                rel="noopener noreferrer"
                 className="clickable hover:text-slate-900 hover:underline"
               >
-                github.com/jxpaa25
+                portfolio-opal-iota-10.vercel.app
               </a>
             </div>
           </div>
         </header>
 
         <section className="flex flex-col gap-1.5">
-          <h2 className="text-[10px] text-slate-400 uppercase tracking-[0.25em] border-b border-slate-200 pb-0.5">
-            Profile Summary
+          <h2 className="text-[10px] text-slate-400 uppercase tracking-[0.08em] border-b border-slate-200 pb-0.5">
+            Summary
           </h2>
-          <p className="text-xs text-slate-700 leading-relaxed text-justify max-w-3xl">
-            Software and Information Engineering student focused on backend
-            engineering, distributed systems, and application security (AppSec).
-            Stack-agnostic developer experienced in building scalable
-            server-side architectures, implementing defensive design patterns,
-            and developing frontend interfaces with modern frameworks to deliver
-            full-stack applications.
+          <p className="text-xs text-slate-700 leading-relaxed">
+            Final-year Software and Information Engineering student at
+            Singidunum University, looking for a junior full-stack role with a
+            backend focus on TypeScript (Node.js, NestJS) and Java (Spring
+            Boot). Experienced in building secure REST APIs with Spring Boot
+            and NestJS, containerizing services with Docker, and deploying
+            production web applications on Vercel.
           </p>
         </section>
 
         <section className="flex flex-col gap-1.5">
-          <h2 className="text-[10px] text-slate-400 uppercase tracking-[0.25em] border-b border-slate-200 pb-0.5">
-            Technical Arsenal
+          <h2 className="text-[10px] text-slate-400 uppercase tracking-[0.08em] border-b border-slate-200 pb-0.5">
+            Skills
           </h2>
-          <div className="flex flex-col text-xs text-slate-700 border-t border-slate-100">
-            <div className="flex items-baseline py-1.5 border-b border-slate-100">
-              <span className="text-[9px] uppercase tracking-widest text-slate-400 shrink-0 w-36 font-mono pr-2">
-                Languages:
-              </span>
-              <span className="font-medium text-slate-800">
-                JavaScript • TypeScript • Python • Solidity • Java
-              </span>
-            </div>
-
-            <div className="flex items-baseline py-1.5 border-b border-slate-100">
-              <span className="text-[9px] uppercase tracking-widest text-slate-400 shrink-0 w-36 font-mono pr-2">
-                Frameworks, Libs & Tools:
-              </span>
-              <span className="font-medium text-slate-800">
-                Next.js • React • Nest.js • Spring Boot • Express.js • Tailwind
-                CSS • GSAP • Postman • Claude AI
-              </span>
-            </div>
-
-            <div className="flex items-baseline py-1.5 border-b border-slate-100">
-              <span className="text-[9px] uppercase tracking-widest text-slate-400 shrink-0 w-36 font-mono pr-2">
-                Backend, Ops & DBs:
-              </span>
-              <span className="font-medium text-slate-800">
-                Node.js • PostgreSQL • Prisma ORM • Docker • Redis
-              </span>
-            </div>
+          <div className="flex flex-col text-xs text-slate-700">
+            {[
+              [
+                "Languages:",
+                "TypeScript, JavaScript, Java, Python, Solidity",
+              ],
+              [
+                "Backend:",
+                "Node.js, NestJS, Express, Spring Boot, REST APIs, JWT, RBAC",
+              ],
+              ["Frontend:", "React, Next.js, Tailwind CSS, GSAP"],
+              [
+                "Data & DevOps:",
+                "PostgreSQL, Prisma, Docker, Git, CI/CD (GitHub Actions), Vercel",
+              ],
+              ["Testing:", "JUnit, Vitest"],
+            ].map(([label, skills], i, rows) => (
+              <div
+                key={label}
+                className={`flex items-baseline py-1 ${
+                  i < rows.length - 1 ? "border-b border-slate-100" : ""
+                }`}
+              >
+                <span className="text-[9px] uppercase tracking-widest text-slate-400 shrink-0 w-32 font-mono pr-2">
+                  {label}
+                </span>
+                <span className="font-medium text-slate-800">{skills}</span>
+              </div>
+            ))}
           </div>
         </section>
 
         <section className="flex flex-col gap-3">
-          <h2 className="text-[10px] text-slate-400 uppercase tracking-[0.25em] border-b border-slate-200 pb-0.5">
-            Selected Works
+          <h2 className="text-[10px] text-slate-400 uppercase tracking-[0.08em] border-b border-slate-200 pb-0.5">
+            Projects
           </h2>
-          <div className="flex flex-col gap-3.5">
+          <div className="flex flex-col gap-3">
             {/* PROJECT 1 */}
             <div className="flex flex-col gap-0.5">
-              <div className="flex justify-between items-baseline">
+              <div className="flex justify-between items-baseline gap-4">
                 <h3 className="font-bold text-sm text-slate-900">
                   Microservices Restaurant Management System
                 </h3>
                 <a
                   href="https://github.com/jxpaa25/restaurant-management-backend"
                   target="_blank"
+                  rel="noopener noreferrer"
                   className="clickable text-[11px] font-mono text-slate-400 hover:underline"
                 >
-                  GitHub &rarr;
+                  github.com/jxpaa25/restaurant-management-backend
                 </a>
               </div>
-              <div className="flex flex-wrap gap-2 text-[10px] text-slate-500 font-mono">
-                <span>Spring Boot</span> • <span>Java</span> •
-                <span>PostgreSQL</span> • <span>Docker</span> •
-                <span>Microservices</span> • <span>JWT</span>
-              </div>
-              <p className="text-xs text-slate-600 leading-relaxed text-justify mt-0.5">
-                Built a distributed backend using microservices to decouple
-                authentication from core business operations. Containerized
-                PostgreSQL instances to enforce database-per-service isolation,
-                integrated a centralized JWT validation layer, and implemented
-                Role-Based Access Control (RBAC) for secure inter-service
-                communication.
+              <p className="text-[10px] text-slate-500 font-mono">
+                Java • Spring Boot • Spring Security • PostgreSQL • Docker • JWT
               </p>
+              <ul className="list-disc pl-4 flex flex-col gap-0.5 text-xs text-slate-600 leading-relaxed marker:text-slate-400 mt-0.5">
+                <li>
+                  Split the backend into an Identity service and a Restaurant
+                  service, each with its own PostgreSQL database, so
+                  authentication runs separately from menu, table and order
+                  logic.
+                </li>
+                <li>
+                  Built a shared library with the JWT filter and token
+                  validation used by both services, and restricted endpoints by
+                  role with Spring Security&apos;s @PreAuthorize.
+                </li>
+                <li>
+                  Implemented the order lifecycle (pending, completed,
+                  cancelled) in @Transactional service methods, so each order
+                  change is saved in full or rolled back.
+                </li>
+                <li>
+                  Containerized both services and their databases with Docker
+                  Compose and published the REST API documentation as a Postman
+                  collection.
+                  {/* TODO: add the number of REST endpoints */}
+                </li>
+              </ul>
             </div>
 
             {/* PROJECT 2 */}
             <div className="flex flex-col gap-0.5">
-              <div className="flex justify-between items-baseline">
-                <h3 className="font-bold text-sm text-slate-900">
-                  Decentralized Automated Market Maker (AMM)
-                </h3>
-                <a
-                  href="https://github.com/jxpaa25/Web3AcademyTasks/tree/main"
-                  target="_blank"
-                  className="clickable text-[11px] font-mono text-slate-400 hover:underline"
-                >
-                  GitHub &rarr;
-                </a>
-              </div>
-              <div className="flex flex-wrap gap-2 text-[10px] text-slate-500 font-mono">
-                <span>Solidity</span> • <span>Smart Contracts</span> •
-                <span>ERC20</span> • <span>OpenZeppelin</span> •
-                <span>DeFi Architecture</span>
-              </div>
-              <p className="text-xs text-slate-600 leading-relaxed text-justify mt-0.5">
-                Built a Uniswap V2-style decentralized exchange deployed on
-                Ethereum testnets. Implemented the Factory-Pair-Router pattern
-                for dynamic liquidity pool deployments. Developed smart
-                contracts to manage LP token minting via the Constant Product
-                Formula and handled on-chain token swaps with automated protocol
-                fees.
-              </p>
-            </div>
-
-            {/* PROJECT 3 */}
-            <div className="flex flex-col gap-0.5">
-              <div className="flex justify-between items-baseline">
+              <div className="flex justify-between items-baseline gap-4">
                 <h3 className="font-bold text-sm text-slate-900">
                   Tehnički Pregled Lazarević 1968
                 </h3>
                 <a
                   href="https://www.tehnickipregledlazarevic-pozarevac.rs/"
                   target="_blank"
+                  rel="noopener noreferrer"
                   className="clickable text-[11px] font-mono text-slate-400 hover:underline"
                 >
-                  Live Link &rarr;
+                  tehnickipregledlazarevic-pozarevac.rs
                 </a>
               </div>
-              <div className="flex flex-wrap gap-2 text-[10px] text-slate-500 font-mono">
-                <span>Next.js</span> • <span>GSAP</span> •
-                <span>Tailwind CSS</span> • <span>Vercel</span>
-              </div>
-              <p className="text-xs text-slate-600 leading-relaxed text-justify mt-0.5">
-                Developed a web platform for a technical inspection business
-                with a focus on fast performance and clean UI. Implemented
-                responsive animations using GSAP and Tailwind CSS, and optimized
-                SEO performance to improve local search visibility and keyword
-                rankings.
+              <p className="text-[10px] text-slate-500 font-mono">
+                Next.js • TypeScript • Tailwind CSS • GSAP • Vercel
               </p>
+              <ul className="list-disc pl-4 flex flex-col gap-0.5 text-xs text-slate-600 leading-relaxed marker:text-slate-400 mt-0.5">
+                <li>
+                  Built the production website for a vehicle inspection
+                  business in Požarevac, working out the requirements directly
+                  with the owner.
+                </li>
+                <li>
+                  Deployed it on Vercel and connected the business&apos;s custom
+                  .rs domain.
+                </li>
+                <li>
+                  Implemented technical SEO for local search: schema.org
+                  LocalBusiness structured data, a sitemap and robots file, and
+                  a statically generated page with its own metadata for each
+                  service.
+                  {/* TODO: add Lighthouse SEO/performance score */}
+                  {/* TODO: add Search Console clicks or local search ranking */}
+                </li>
+                <li>
+                  Built responsive layouts and scroll animations with Tailwind
+                  CSS and GSAP.
+                </li>
+              </ul>
+            </div>
+
+            {/* PROJECT 3 */}
+            <div className="flex flex-col gap-0.5">
+              <div className="flex justify-between items-baseline gap-4">
+                <h3 className="font-bold text-sm text-slate-900">
+                  Decentralized Automated Market Maker (AMM)
+                </h3>
+                <a
+                  href="https://github.com/jxpaa25/Web3AcademyTasks/tree/main/amm"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="clickable text-[11px] font-mono text-slate-400 hover:underline"
+                >
+                  github.com/jxpaa25/Web3AcademyTasks/tree/main/amm
+                </a>
+              </div>
+              <p className="text-[10px] text-slate-500 font-mono">
+                Solidity • ERC20 • OpenZeppelin
+              </p>
+              <ul className="list-disc pl-4 flex flex-col gap-0.5 text-xs text-slate-600 leading-relaxed marker:text-slate-400 mt-0.5">
+                <li>
+                  Built a Uniswap V2-style decentralized exchange and deployed it
+                  to the Ethereum Sepolia testnet.
+                </li>
+                <li>
+                  Implemented the Factory-Pair-Router architecture, where the
+                  factory deploys a liquidity pool contract for each token pair.
+                </li>
+                <li>
+                  Wrote the pair logic that mints LP tokens using the constant
+                  product formula and charges a protocol fee on swaps.
+                </li>
+              </ul>
             </div>
 
             {/* PROJECT 4 */}
             <div className="flex flex-col gap-0.5">
-              <div className="flex justify-between items-baseline">
+              <div className="flex justify-between items-baseline gap-4">
                 <h3 className="font-bold text-sm text-slate-900">
                   NNCraft: Deep Learning Framework from Scratch
                 </h3>
                 <a
                   href="https://github.com/jxpaa25/NNCraft"
                   target="_blank"
+                  rel="noopener noreferrer"
                   className="clickable text-[11px] font-mono text-slate-400 hover:underline"
                 >
-                  GitHub &rarr;
+                  github.com/jxpaa25/NNCraft
                 </a>
               </div>
-              <div className="flex flex-wrap gap-2 text-[10px] text-slate-500 font-mono">
-                <span>Python</span> • <span>NumPy</span> •
-                <span>Linear Algebra</span> • <span>Machine Learning</span>
-              </div>
-              <p className="text-xs text-slate-600 leading-relaxed text-justify mt-0.5">
-                Built a dense neural network framework from scratch using NumPy
-                to understand the underlying mathematics of machine learning.
-                Implemented abstractions for custom network layers, designed
-                matrix-based backpropagation pipelines, and added optimization
-                algorithms including Adam, RMSprop, and regularizers.
+              <p className="text-[10px] text-slate-500 font-mono">
+                Python • NumPy
               </p>
+              <ul className="list-disc pl-4 flex flex-col gap-0.5 text-xs text-slate-600 leading-relaxed marker:text-slate-400 mt-0.5">
+                <li>
+                  Built a dense neural network library using only NumPy, to
+                  learn how frameworks such as PyTorch work internally.
+                </li>
+                <li>
+                  Implemented matrix-based backpropagation, ReLU and sigmoid
+                  activations, and five loss functions, including MSE and
+                  cross-entropy.
+                </li>
+                <li>
+                  Added SGD with momentum, AdaGrad, AdaDelta, RMSprop and Adam
+                  optimizers, plus dropout and L1/L2 regularization.
+                </li>
+              </ul>
             </div>
           </div>
         </section>
 
         <section className="flex flex-col gap-2.5">
-          <h2 className="text-[10px] text-slate-400 uppercase tracking-[0.25em] border-b border-slate-200 pb-0.5">
-            Education & Timeline
+          <h2 className="text-[10px] text-slate-400 uppercase tracking-[0.08em] border-b border-slate-200 pb-0.5">
+            Education
           </h2>
           <div className="flex flex-col gap-3 relative pl-4 border-l border-slate-200 ml-1">
             <div className="relative">
@@ -292,14 +347,14 @@ export default function ResumePage() {
               <div className="flex justify-between items-start">
                 <div>
                   <h3 className="font-bold text-xs text-slate-900">
-                    Software and Information Engineering
+                    B.Sc. Software and Information Engineering
                   </h3>
                   <p className="text-[11px] text-slate-600">
-                    Singidunum University (3rd year)
+                    Singidunum University, Belgrade. Final (4th) year.
                   </p>
                 </div>
                 <span className="text-[11px] font-mono text-slate-500">
-                  2023 — Present
+                  2023 – Expected 2027
                 </span>
               </div>
             </div>
@@ -311,11 +366,11 @@ export default function ResumePage() {
                     Information Technology
                   </h3>
                   <p className="text-[11px] text-slate-600">
-                    Electrotechnical School "Rade Končar"
+                    Electrotechnical School &quot;Rade Končar&quot;
                   </p>
                 </div>
                 <span className="text-[11px] font-mono text-slate-500">
-                  2019 — 2023
+                  2019 – 2023
                 </span>
               </div>
             </div>
